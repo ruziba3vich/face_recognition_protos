@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package embed;
+
+service FaceEmbedder {
+  rpc GetEmbedding (ImageRequest) returns (EmbeddingResponse);
+}
+
+message ImageRequest {
+  bytes image = 1;
+}
+
+message EmbeddingResponse {
+  repeated float embedding = 1;
+  string error = 2;
+}
