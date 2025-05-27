@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package embed;
 
+option go_package = "genprotos/face_recognition_service";
+
 service FaceEmbedder {
   rpc GetEmbedding (ImageRequest) returns (EmbeddingResponse);
 }
